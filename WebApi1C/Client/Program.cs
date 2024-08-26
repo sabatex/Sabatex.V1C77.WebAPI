@@ -24,20 +24,20 @@ namespace WebApi1C.Client
             builder.Logging.SetMinimumLevel(LogLevel.Debug);
 
             builder.Services.AddScoped<Service1C77>();
-            
-            builder.Services.AddMudBlazorDialog();
-            builder.Services.AddMudBlazorResizeListener();
-            builder.Services.AddMudBlazorSnackbar(config => {
-                config.PositionClass = Defaults.Classes.Position.BottomLeft;
+            builder.Services.AddMudServices();
+            //builder.Services.AddMudBlazorDialog();
+            //builder.Services.AddMudBlazorResizeListener();
+            //builder.Services.AddMudBlazorSnackbar(config => {
+            //    config.PositionClass = Defaults.Classes.Position.BottomLeft;
 
-                config.PreventDuplicates = false;
-                config.NewestOnTop = false;
-                config.ShowCloseIcon = true;
-                config.VisibleStateDuration = 10000;
-                config.HideTransitionDuration = 500;
-                config.ShowTransitionDuration = 500;
-                //config.SnackbarDefaultVariant = Variant.Filled;
-            });
+            //    config.PreventDuplicates = false;
+            //    config.NewestOnTop = false;
+            //    config.ShowCloseIcon = true;
+            //    config.VisibleStateDuration = 10000;
+            //    config.HideTransitionDuration = 500;
+            //    config.ShowTransitionDuration = 500;
+            //    //config.SnackbarDefaultVariant = Variant.Filled;
+            //});
             await builder.Build().RunAsync();
         }
     }
